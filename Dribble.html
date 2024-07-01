@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+     <div class="hero">
+          <h2>Dribble Clone 2.O</h2>
+          <h1>The world's destination <br />for design</h1>
+          <p>
+            Get inspired by the works of millions of top-rated designers &
+            agencies around the world.
+          </p>
+          
+        </div>
+
+    <main>
+     
+        <section class="view-toggle">
+            <button onclick="showContent('popularity')">Popularity</button>
+            <button onclick="showContent('new')">New</button>
+            <button onclick="showContent('net-worthy')">Net Worthy</button>
+        </section>
+
+        <section id="popularity" class="content-section">
+            <h2>Popular Shots</h2>
+            <div class="shot">
+                <img src="https://cdn.dribbble.com/userupload/10113192/file/original-d2b98996c8c49a630c760e3fdf1a1ac9.png?resize=400x300&vertical=center" alt="Shot Image">
+                <h3>Clone 2.O</h3>
+                <p>Dribbble Redesign</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+
+        <section id="new" class="content-section" style="display:none;">
+            <h2>New Shots</h2>
+            <div class="shot">
+                <img src="https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=273x340&amp;vertical=center" alt="Shot Image">
+                <h3>Aurélien Salomon</h3>
+                <p>Design Director</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+
+        <section id="net-worthy" class="content-section" style="display:none;">
+            <h2>Net Worthy Shots</h2>
+            <div class="shot">
+                <img src="https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=273x340&amp;vertical=center" alt="Shot Image">
+                <h3>Elif Kamesoglu</h3>
+                <p>Brand Designer</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+         <section class="category-menu">
+            <button onclick="showCategory('all')">All</button>
+            <button onclick="showCategory('animation')">Animation</button>
+            <button onclick="showCategory('branding')">Branding</button>
+            <button onclick="showCategory('illustration')">Illustration</button>
+            <button onclick="showCategory('web-design')">Web Design</button>
+        </section>
+
+        <section id="all" class="content-section">
+            <h2>All Shots</h2>
+            <div class="shot">
+                <img src="https://i.ytimg.com/vi/Vu90oMca10w/maxresdefault.jpg" alt="Shot Image">
+                <h3>Client Acquisition</h3>
+                <p>Effortless Client Engagement</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+
+        <section id="animation" class="content-section" style="display:none;">
+            <h2>Animation Shots</h2>
+            <div class="shot">
+              <video
+              src="https://cdn.dribbble.com/uploads/47180/original/1def7b9fb30832c4af4353b325d9c3af.mp4?1685645402"
+              autoplay
+              loop
+              muted
+            ></video>
+                
+                <h3>Jesse Showalter</h3>
+                <p>Design Educator</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+
+        <section id="branding" class="content-section" style="display:none;">
+            <h2>Branding Shots</h2>
+            <div class="shot">
+                <img src="https://www.logolynx.com/images/logolynx/26/26efd92f12d14df256d07a786b7fb29f.jpeg" alt="Shot Image">
+                <h3>Logo</h3>
+                <p>Iconic Emblem</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+
+        <section id="illustration" class="content-section" style="display:none;">
+            <h2>Illustration Shots</h2>
+            <div class="shot">
+                <img src="https://i.pinimg.com/originals/d2/8d/16/d28d165c6ad5f93bc8951074f7db5118.png" alt="Shot Image">
+                <h3></h3>
+                <p>Artistic Rendering.</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+
+        <section id="web-design" class="content-section" style="display:none;">
+            <h2>Web Design Shots</h2>
+            <div class="shot">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.xi_VY54V535hztHz11VTyQHaFL&pid=Api&P=0&h=180" alt="Shot Image">
+                <h3></h3>
+                <p>Digital Layout</p>
+            </div>
+            <!-- Add more shot items here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dribbble Clone</p>
+    </footer>
+     <script>
+        function showCategory(categoryId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(categoryId).style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function showContent(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
